@@ -339,36 +339,37 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		SharedPreferences.Editor editor = sharedPreferences.edit();
 		item.setChecked(true);
-		switch (item.getItemId()) {
-		case R.id.menuSettingsReceiveBinary:
+
+//		switch (item.getItemId()) {
+//		case R.id.menuSettingsReceiveBinary:
 			editor.putString(RECEIVE_DATA_FORMAT, BINARY);
 			editor.commit();
-			break;
-		case R.id.menuSettingsReceiveInteger:
+//			break;
+//		case R.id.menuSettingsReceiveInteger:
 			editor.putString(RECEIVE_DATA_FORMAT, INTEGER);
 			editor.commit();
-			break;
-		case R.id.menuSettingsReceiveHexadecimal:
+//			break;
+//		case R.id.menuSettingsReceiveHexadecimal:
 			editor.putString(RECEIVE_DATA_FORMAT, HEXADECIMAL);
 			editor.commit();
-			break;
-		case R.id.menuSettingsReceiveText:
+//			break;
+//		case R.id.menuSettingsReceiveText:
 			editor.putString(RECEIVE_DATA_FORMAT, TEXT);
 			editor.commit();
-			break;
-		case R.id.menuSettingsDelimiterNone:
+//			break;
+//		case R.id.menuSettingsDelimiterNone:
 			editor.putString(DELIMITER, DELIMITER_NONE);
 			editor.commit();
-			break;
-		case R.id.menuSettingsDelimiterNewLine:
+//			break;
+//		case R.id.menuSettingsDelimiterNewLine:
 			editor.putString(DELIMITER, DELIMITER_NEW_LINE);
 			editor.commit();
-			break;
-		case R.id.menuSettingsDelimiterSpace:
+//			break;
+//		case R.id.menuSettingsDelimiterSpace:
 			editor.putString(DELIMITER, DELIMITER_SPACE);
 			editor.commit();
-			break;
-		}
+//			break;
+//		}
 
 		receiveDataFormat = sharedPreferences.getString(RECEIVE_DATA_FORMAT, TEXT);
 		setDelimiter();
